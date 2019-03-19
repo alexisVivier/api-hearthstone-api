@@ -1,9 +1,53 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-icon name="contact" class="contact-icon"></ion-icon>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+  <ion-item>
+    <ion-label>Set</ion-label>
+    <ion-select placeholder="Trier par extension" (ionChange)="getCardsBySet();" [(ngModel)]="choice">
+      <ion-select-option value="Goblins vs Gnomes">Goblins vs Gnomes</ion-select-option>
+      <ion-select-option value="Basic" selected-text>Basic</ion-select-option>
+      <ion-select-option value="Classic">Classic</ion-select-option>
+      <ion-select-option value="Knights of the Frozen Throne">Knights of the Frozen Throne</ion-select-option>
+      <ion-select-option value="Kobolds & Catacombs">Kobolds & Catacombs</ion-select-option>
+      <ion-select-option value="Mean Streets of Gadgetzan">Mean Streets of Gadgetzan</ion-select-option>
+      <ion-select-option value="Naxxramas">Naxxramas</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- <ion-list>
+    <ion-item button *ngFor="let launche of data " [routerLink]="['/', 'launches', launche.flight_number]" class="in-list item ion-focusable item-label hydrated">
+      <ion-avatar slot="start" class="hydrated">
+        <img [src]="launche.links.mission_patch_small">
+      </ion-avatar>
+      <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s hydrated">
+        <h2>{{ launche.mission_name }}</h2>
+        <h3>{{ launche.launch_year }}</h3>
+        <p>{{ launche.details }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list> -->
+
+  <!-- List of Text Items -->
+  <ion-list *ngFor="let item of cards" [routerLink]="['/', 'card-detail', item]">
+    <ion-item>
+      <div class="item-card-list">
+        <img [src]="item.img" *ngIf="item.img">
+        <div class="div-data-list">
+          <ion-label>{{item.name}}</ion-label>
+          <ion-label>{{item.cardSet}}</ion-label>
+          <ion-label>{{item.type}}</ion-label>
+        </div>
+        <ion-button color="light">Voir plus</ion-button>
+      </div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

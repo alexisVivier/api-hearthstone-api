@@ -1,4 +1,44 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+ion-toolbar {
+    font-family: 'Montserrat';
+
+    .contact-icon {
+        zoom: 2.0;
+    }
+}
+
+ion-content {
+
+    ion-card {
+
+        ion-card-header {
+
+            padding-bottom: 0;
+
+        }
+
+        .ion-card-img-container {
+
+            display: flex;
+            justify-content: center;
+
+            .card-img {
+                width: auto;
+                height: 57vh;
+                width: auto;
+            }
+        }
+    }
+
+    .card-search-input {
+        border: 2px grey solid;
+        font-family: 'Montserrat';
+        width: 80vw;
+        margin: 2vh auto;
+    }
+
+    .card-search-btn {
+        width: 80vw;
+        margin: 5vh auto;
+    }
+
 }

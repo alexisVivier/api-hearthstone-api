@@ -1,1 +1,32 @@
+ion-toolbar {
+    font-family: 'Montserrat';
 
+    .contact-icon {
+        zoom: 2.0;
+    }
+}
+
+ion-content {
+
+    ion-list {
+
+        .item-card-list {
+
+            display: flex;
+            height: 15vh;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                width: 13vw;
+                height: auto;
+            }
+
+            .div-data-list {
+                display: flex;
+                flex-direction: column;
+                width: 40vw;
+            }
+        }
+    }
+}
