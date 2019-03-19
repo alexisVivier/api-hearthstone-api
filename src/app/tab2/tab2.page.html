@@ -22,19 +22,6 @@
     </ion-select>
   </ion-item>
 
-  <!-- <ion-list>
-    <ion-item button *ngFor="let launche of data " [routerLink]="['/', 'launches', launche.flight_number]" class="in-list item ion-focusable item-label hydrated">
-      <ion-avatar slot="start" class="hydrated">
-        <img [src]="launche.links.mission_patch_small">
-      </ion-avatar>
-      <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s hydrated">
-        <h2>{{ launche.mission_name }}</h2>
-        <h3>{{ launche.launch_year }}</h3>
-        <p>{{ launche.details }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list> -->
-
   <!-- List of Text Items -->
   <ion-list *ngFor="let item of cards" [routerLink]="['/', 'card-detail', item]">
     <ion-item>
@@ -45,7 +32,6 @@
           <ion-label>{{item.cardSet}}</ion-label>
           <ion-label>{{item.type}}</ion-label>
         </div>
-        <ion-button color="light">Voir plus</ion-button>
       </div>
     </ion-item>
   </ion-list>

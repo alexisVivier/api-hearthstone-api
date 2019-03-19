@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
   providedIn: "root"
 })
 export class CardService {
-  url = "";
-  apiKey = "e6e0db4cdbmsh1878d9259f8587ep14f7e9jsn4e47fb3caa7f";
+  url = "";                                      
+  protected apiKey = "e6e0db4cdbmsh1878d9259f8587ep14f7e9jsn4e47fb3caa7f";
   httpOptions = {
     headers: new HttpHeaders({
       "X-RapidAPI-Key": this.apiKey,
